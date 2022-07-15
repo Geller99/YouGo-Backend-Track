@@ -1,0 +1,26 @@
+{
+  "name": "0xnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn server.ts"
+  },
+  "author": "Geller Micael",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
