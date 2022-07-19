@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Geller99/Sexy-Ui">
+  <a href="https://github.com/Geller99/YouGo-Backend-Track">
    
   </a>
 </p>
@@ -20,11 +20,11 @@
   <br />
    <a href="/"><strong>Explore the docs! »</strong></a>
    <br/>
-  <a href="/">Report a Bug</a>
+  <a href="https://github.com/Geller99/YouGo-Backend-Track/issues/new">Report a Bug</a>
   ·
-  <a href="/">Request a Feature</a>
+  <a href="https://github.com/Geller99/YouGo-Backend-Track/issues/new">Request a Feature</a>
   ·
-  <a href="/">Ask a Question</a>
+  <a href="https://github.com/Geller99/YouGo-Backend-Track/issues/new">Ask a Question</a>
 </div>
 
 <hr/>
