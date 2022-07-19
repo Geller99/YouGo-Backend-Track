@@ -1,0 +1,102 @@
+swagger: "2.0"
+info:
+  description: "Reveal Image Manipulation API"
+  version: "1.0.0"
+  title: "Reveal"
+  contact:
+    email: "get@http.post"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "NA"
+basePath: "/v2"
+tags:
+- name: "Image Manipulation API"
+  description: "Image Manipulation"
+  externalDocs:
+    description: "First Version"
+    url: "http://swagger.io"
+
+schemes:
+- "https"
+- "http"
+paths:
+
+  /resize:
+    post:
+      tags:
+      - "img"
+      summary: "Image resize endpoint"
+      description: "uploads an image and resizes it according to specified height and width"
+      operationId: "01"
+      consumes:
+      - "multipart/form-data"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "file to upload"
+        required: false
+        type: "file"
+      responses:
+        "200":
+          description: "successful operation"
+          schema: {}
+        "401":
+          description: "unsuccessful, invalid file type"
+          schema: {}
+  
+  /grayscale:
+    post:
+      tags:
+      - "img"
+      summary: "Image grayscale endpoint"
+      description: "returns a grayscale version of the uploaded image"
+      operationId: "02"
+      consumes:
+      - "multipart/form-data"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "file to upload"
+        required: false
+        type: "file"
+      responses:
+        "200":
+          description: "successful operation"
+          schema: {}
+        "401":
+          description: "unsuccessful, invalid file type"
+          schema: {}
+  
+  /rotate:
+    post:
+      tags:
+      - "img"
+      summary: "Image rotate endpoint"
+      description: "uploads an image and rotates it according to a specified angle"
+      operationId: "03"
+      consumes:
+      - "multipart/form-data"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "file to upload"
+        required: false
+        type: "file"
+      responses:
+        "200":
+          description: "successful operation"
+          schema: {}
+        "401":
+          description: "unsuccessful, invalid file type"
+          schema: {}
+            
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

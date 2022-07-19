@@ -69,8 +69,12 @@ export const rotatePhoto = async (req: any, res: any, next: any) => {
   const filePath = path.join(
     __dirname,
     "..",
-    `public/rotate/rotated${Date.now()}.${extension}`
+    `../../public/rotate/rotated${Date.now()}.${extension}`
   );
+
+  const me = "../../../public/images"
+
+  console.log(res)
 
   await sharp(req.file.buffer)
     .rotate(angle)

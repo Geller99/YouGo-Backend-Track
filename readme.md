@@ -1,100 +1,89 @@
+<p align="center">
+  <a href="https://github.com/Geller99/Sexy-Ui">
+   
+  </a>
+</p>
 
-**My Official Backend Track**
+<h1 align="center">Reveal API - World Class Image Manipulation in One Click! </h1>
 
+<br>
 
-## Topics and Challenges
+<p align="center">
+  <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/chakra-ui/chakra-ui.svg?logo=lgtm&logoWidth=18"/>
+</p>
+<br />
 
-Hey there! 
+<p align="center"> Reveal API makes for effortless access to image upload, manipulation, storage and downloads! </p>
 
-This repo contains my aggressive dive into Backend Engineering using Node Js and Express, 
+<div align="center">
+  <br />
+  <br />
+   <a href="/"><strong>Explore the docs! »</strong></a>
+   <br/>
+  <a href="/">Report a Bug</a>
+  ·
+  <a href="/">Request a Feature</a>
+  ·
+  <a href="/">Ask a Question</a>
+</div>
 
-The goal is to complete YouGoDev's Backend Track build by Google's ZenHorace, dive into Database Engineering and Finally into Distributed Systems with Golang
+<hr/>
 
-You can find the Track here! https://github.com/YouGoDevs/YouGo-Backend-Track/blob/main/Project-0.md
+## Looking for the documentation? 📝
 
-As part of my accountability process, I'll be updating this repo with articles from my learnings, sessions with our server mentors and key takeaways from my mistakes
-
-My intention is to build this into a series for anyone looking to follow along this journey, so feel free to star this repo and stay connected!
-
-
-
-
-## Design Documents
-
-The above linked design document represents the QA section of the YouGo Backend Track,
-
-It covers certain choices made by my engineering team (ME) and the reasons behind them
-
-The goal is to have a full understanding of every piece of logic implemented and an explanation behind my decisions as I go
-
-Take a read and let me know what you think!
-
-
-
-## API Demo
-
-To demo this API, head over to ``0xServer.heroku.app``
-
-Here's a link to the Swagger API Documentation for more information on the different endpoints available
-
-To clone this repo on your local environment
-
-Head over to your terminal/command line and enter the command ``git clone "repoURL" `` 
-
-Once you've successfully cloned it, enter ``npm i`` to install all dependencies and modules
-
-Then switch over to the source directory and enter ``npm run dev`` or ``yarn dev``
+The API Swagger Spec YAML file can be found here -- 
+My Design Choices and Decisions are documented here --
+Official Project Design Decisions will be documented here -- 
 
 
 
+Latest version (v0.0.1)
 
 
-## Testing and Documentation
+## Features 🚀
 
-The objective with testing is to establish a fundamnetal approach to software testing and CI/CD processes.
-
-I'll be using the 3 As of testing as a guideline to building proper unit tests for my methods
-
-Testing Framework ``Jest``
-
-
+- [X] Super Fast Image Processing Speeds
+- [X] Industry Standard Accessibility
+- [X] Premium Documentation
+- [X] Open Source 
+- [X] Multiple Manipulation Tiers
 
 
-## Key Takeaways
+## Support Sexy-UI 💖
 
-This section will be updated with links to my medium, dev.to and hashnode as I document my mistakes, and learnings
+Feel free to joing our YouGoDevs community and contribute to the original Project Exercises!
 
-Stay tuned!
+### Individuals
 
+Lead Developer - ZenHorace
+Student        - Geller Micael
 
+### Organizations
 
-## Technologies 
-
-```
-Node JS 
-Typescript
-Express JS
-MongoDB
-Jest
-Multer
-Sharp
-
-```
+YouGo Fullstack Mentoring Group
 
 
 
+## CodeSandbox Templates
 
+Demo Incoming...
 
-## How to Get Involved
+## Contributing
 
-To get involved on the Backend Track, Join the discord and get started!
+Looking to contribute? Marvelous!
 
-To create an issue or a discussion thread around any of my glorious bugs, or suggest a feature, hit these links!
+Feel free to open issues or discussion threads or fork the repo and contribute!
 
-- Open an issue
-- Start Discussion
-- Suggest Feature
+## Contributors
 
+Team Lead x Devs
 
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specifications.
 
+## License
+
+MIT © [Geller Micael](https://github.com/Geller99)
