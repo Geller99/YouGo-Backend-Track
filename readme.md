@@ -31,11 +31,11 @@
 
 ## Looking for the documentation? 📝
 
-The API Swagger Spec YAML file can be found here -- https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/api-docs.yaml
+The API Swagger Spec YAML file can be found [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/api-docs.yaml) 
 <br/>
-My Design Choices and Decisions are documented here -- https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/design-doc.md
+My Design Choices and Decisions are documented [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/design-doc.md)
 <br/>
-Official Project Design Decisions will be documented here -- https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/moodBoard.md
+Official Project Design Decisions will be documented [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/moodBoard.md)
 
 
 
