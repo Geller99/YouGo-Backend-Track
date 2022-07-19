@@ -49,7 +49,7 @@ Latest version (v0.0.1)
 - [X] Multiple Manipulation Tiers
 
 
-## Support Sexy-UI 💖
+## Support Reveal API 💖
 
 Feel free to joing our YouGoDevs community and contribute to the original Project Exercises!
 
