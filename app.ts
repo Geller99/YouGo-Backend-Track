@@ -17,7 +17,29 @@ let options = {
   root: path.join(__dirname),
 };
  
+//4: app.use() adds a middleware
+//middleware tries to handle every request
+//this middleware is used for logging
+// app.use(( req, res, next ) => {
+//   let request = req.method.toUpperCase() +' '+ req.url
 
+//   if( Object.keys( req.query ).length ){
+//     request += '?'+ querystring.stringify( req.query )
+//   }
+
+//   if( Object.keys( req.body ).length ){
+//     request += "\r\n"+ JSON.stringify( req.body )
+//   }
+
+//   console.info( `--------------------------------------------------------------\nRequest: ${request}` )
+
+//   //next() tells Express to find the next request handler
+//   next()
+
+//   //NOTES:
+//   // #1 - you can put some logic here, but it should only handle global tasks like authentication and parsing formats
+//   // #2 - you should not put your database logic here
+// })
 
 
 // Pages
