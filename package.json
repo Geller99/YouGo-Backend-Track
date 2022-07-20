@@ -2,12 +2,12 @@
   "name": "0xnode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn app.ts",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node ."
   },
   "author": "Geller Micael",
   "license": "ISC",
