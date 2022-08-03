@@ -14,6 +14,7 @@
 - TypeScript
 - YAML
 - MarkDown
+- Jest
 
 ```
 
@@ -59,6 +60,19 @@ Future endpoints will follow the same approach as the project grows.
 - This service will be hosted on AWS or Vercel or Netlify
 
 
+
+### Part 2 Prompts ###
+
+TBD
+
+
+
+
+
+
+**Part 2 Choices**
+
+TBU
 
 
 

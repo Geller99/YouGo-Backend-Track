@@ -1,10 +1,17 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
+import { Image, ImageProps } from "./image-utils";
 const path = require("path");
 const multer = require("multer");
 const sharp = require("sharp");
 
 /**
  * @dev stores image in memory as buffer then loads buffer into Sharp for image resizing
+ */
+
+/**
+ * @dev needs to refactor each route handler to separate file
+ * @dev needs to move multer config to utils 
+ * @dev needs to move filterInt to utils
  */
 const multerStorage = multer.memoryStorage();
 
@@ -42,23 +49,22 @@ export const resizePhoto = async (req: any, res: any, next: any) => {
     });
 };
 
-export const grayscalePhoto = async (req: any, res: any, next: any) => {
+export const grayscalePhoto = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   if (!req.file) return next();
 
   const extension: string = req.file.mimetype.split("/")[1];
   const filePath = path.join(
     __dirname,
-    "..",
+    "../../..",
     `public/grayscale/gray${Date.now()}.${extension}`
   );
 
-  await sharp(req.file.buffer)
-    .greyscale()
-    .jpeg({ quality: 90 })
-    .toFile(filePath)
-    .then((data: any) => {
-      res.status(201).sendFile(filePath);
-    });
+  let grayScaleParams: ImageProps = { req, res, filePath, quality: 90 };
+  Image.grayscalePhoto(grayScaleParams);
 };
 
 export const rotatePhoto = async (req: any, res: any, next: any) => {
@@ -68,19 +74,12 @@ export const rotatePhoto = async (req: any, res: any, next: any) => {
   const extension: string = req.file.mimetype.split("/")[1];
   const filePath = path.join(
     __dirname,
-    "..",
-    `../../public/rotate/rotated${Date.now()}.${extension}`
+    "../../..",
+    `public/rotate/rotated${Date.now()}.${extension}`
   );
-
-
-  await sharp(req.file.buffer)
-    .rotate(angle)
-    .jpeg({ quality: 90 })
-    .toFile(filePath)
-    .then((data: any) => {
-      res.status(201).sendFile(filePath);
-    });
-
+  
+  let rotateParams = {req, res, angle, filePath, quality: 90};
+  Image.rotatePhoto(rotateParams);
 };
 
 const multerFilter = (req: Request, file: any, cb: any) => {
