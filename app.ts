@@ -69,6 +69,7 @@ mainRouter.get("/", (req: Request, res: Response): void => {
 });
 
 mainRouter.get("/home", (req: Request, res: Response): void => {
+  console.log(path.resolve('./public/home.html'));
   res.sendFile(path.resolve('./public/home.html'));
 });
 
