@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.use("/image", imageRouter);
 app.use("/", mainRouter);
 app.use("/user", userRouter);
+app.use(express.static('public'));
 
 const password = process.env.DATABASE_PASSWORD;
 const localDB = process.env.DATABASE_LOCAL;
@@ -68,7 +69,7 @@ mainRouter.get("/", (req: Request, res: Response): void => {
 });
 
 mainRouter.get("/home", (req: Request, res: Response): void => {
-  res.sendFile("./dist/public/home.html", options);
+  res.sendFile("./public/home.html", options);
 });
 
 app.listen(PORT, (): void => {
