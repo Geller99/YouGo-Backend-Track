@@ -35,7 +35,7 @@ if (password != undefined) {
 // );
 
 let options = {
-  root: path.join(__dirname, 'dist'),
+  root: path.join(__dirname),
 };
 
 //adds a middleware middleware tries to handle every request this middleware is used for logging
@@ -69,7 +69,7 @@ mainRouter.get("/", (req: Request, res: Response): void => {
 });
 
 mainRouter.get("/home", (req: Request, res: Response): void => {
-  res.sendFile("./public/home.html", options);
+  res.sendFile("./public/home.html");
 });
 
 app.listen(PORT, (): void => {
