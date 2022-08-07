@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use("/image", imageRouter);
 app.use("/", mainRouter);
 app.use("/user", userRouter);
-app.use(express.static('dist'));
+// app.use(express.static(__dirname + '/dist/0xnode'));
 
 const password = process.env.DATABASE_PASSWORD;
 const localDB = process.env.DATABASE_LOCAL;
@@ -35,7 +35,7 @@ if (password != undefined) {
 // );
 
 let options = {
-  root: path.join(__dirname),
+  root: path.join(__dirname, 'dist'),
 };
 
 //adds a middleware middleware tries to handle every request this middleware is used for logging
