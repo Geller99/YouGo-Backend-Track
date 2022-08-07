@@ -8,7 +8,7 @@ const mainRouter = express.Router();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app: Application = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 //Here we are configuring express to use our middleware
 app.use(bodyParser.urlencoded({ extended: false }));
