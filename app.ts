@@ -64,8 +64,8 @@ app.use((req: any, res: any, next: any) => {
 
 // Pages
 mainRouter.get("/", (req: Request, res: Response): void => {
-  res.send("<h1>Welcome to Reveal Api</h1>")
-  // res.sendFile("./public/index.html", options);
+  // res.send("<h1>Welcome to Reveal Api</h1>")
+  res.sendFile(path.resolve("./public/index.html"));
 });
 
 mainRouter.get("/home", (req: Request, res: Response): void => {
