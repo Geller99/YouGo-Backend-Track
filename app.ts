@@ -69,7 +69,8 @@ mainRouter.get("/", (req: Request, res: Response): void => {
 });
 
 mainRouter.get("/home", (req: Request, res: Response): void => {
-  res.sendFile("./public/home.html");
+  const index = path.join(__dirname, 'public', 'index.html');
+  res.sendFile(index);
 });
 
 app.listen(PORT, (): void => {
