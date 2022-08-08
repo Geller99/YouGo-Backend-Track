@@ -49,6 +49,7 @@ export const manipulateImageFromS3 = async (
        */
       if (manipulation != undefined && manipulation === "rotate") {
         console.log(data);
+        console.log(AWSInternal.accessKey);
         Image.rotatePhoto(data.Body, angle).then(async (data: any) => {
           const result = await data.toBuffer();
           if (saveEdit === true) {
