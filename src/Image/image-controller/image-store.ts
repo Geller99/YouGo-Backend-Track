@@ -21,21 +21,21 @@ const s3 = new aws.S3();
 export const awsUpload = multer({
   storage: multerS3({
     s3: s3,
-    acl: "public-read",
     bucket: bucketName,
     key: function (req: any, file: any, cb: any) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+      const newFileName = uniqueSuffix + '-' + file.originalname;
       console.log(file);
-      cb(null, file.originalname); //use Date.now() for unique file keys
+      cb(null, newFileName);
     }, 
   }),
 });
 
 export const uploadPhoto = async (req: Request, res: Response, next: NextFunction) => {
   if (!req.file) {
-    res.status(401);
-    return next();
+    return res.status(401).json({ error: "No file uploaded" });
   }
-
+  
   try {
     res.status(200).json({
       status: "succeeded I guess...", 

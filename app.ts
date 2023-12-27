@@ -26,6 +26,8 @@ if (password != undefined) {
   db = process.env.DATABASE?.replace("<PASSWORD>", password);
 }
 
+
+// Mongo Atlas Cloud Config 
 // let mongooseConnect = mongoose.connect("mongodb://localhost:27017");
 
 // console.log(
@@ -38,7 +40,7 @@ let options = {
   root: path.join(__dirname),
 };
 
-//adds a middleware middleware tries to handle every request this middleware is used for logging
+//this middleware is used for logging
 app.use((req: any, res: any, next: any) => {
   let request = req.method.toUpperCase() + " " + req.url;
 
@@ -62,9 +64,9 @@ app.use((req: any, res: any, next: any) => {
   // #2 - you should not put your database logic here
 });
 
-// Pages
+// Serve HTML Pages
+
 mainRouter.get("/", (req: Request, res: Response): void => {
-  // res.send("<h1>Welcome to Reveal Api</h1>")
   res.sendFile(path.resolve("./public/index.html"));
 });
 

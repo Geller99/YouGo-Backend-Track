@@ -39,25 +39,26 @@ Official Project Design Decisions will be documented [here](https://github.com/G
 
 
 
-Latest version (v0.0.1)
-
+Latest version (v0.0.2)
 
 ## Features 🚀
 
 - [X] Super Fast Image Processing Speeds
 - [X] Industry Standard Accessibility
-- [X] Premium Documentation
 - [X] Open Source 
 - [X] Multiple Manipulation Tiers
 
 
-## Support Reveal API 💖
+## Support Reveal Images API 💖
 
 Feel free to joing our YouGoDevs community and contribute to the original Project Exercises!
 
 ### Individuals
 
 Lead Developer - ZenHorace
+
+<br/>
+
 Student        - Geller Micael
 
 ### Organizations
@@ -66,25 +67,97 @@ YouGo Fullstack Mentoring Group
 
 
 
-## CodeSandbox Templates
+## Run (Local) and Deploy Commands
 
-Demo Incoming...
+First run 
+``git clone https://github.com/Geller99/YouGo-Backend-Track`` on your local drive in any directory
 
-## Contributing
+Then 
+``npm i`` install required dependencies for node, AWS, multer, sharp etc
 
-Looking to contribute? Marvelous!
+The Package.json file outlines the available commands for running this server locally
 
-Feel free to open issues or discussion threads or fork the repo and contribute!
+```
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn app.ts",
+    "build": "tsc",
+    "start": "tsc && node dist/app.js"
+  }
+```
 
-## Contributors
+``npm run dev`` uses tsc-node-dev and the --respawn command to restart the server whenever chaanges are detected in the code base
 
-Team Lead x Devs
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+## Docker Config
 
-This project follows the
-[all-contributors](https://github.com/all-contributors/all-contributors)
-specifications.
+Make sure you have a running Docker Daemon, if not, install docker desktop
+`https://www.docker.com/products/docker-desktop/`
+
+## Commands
+```
+Pass Environment variables directly via docker run:
+
+docker run -p 3000:3000 -e VARIABLE_NAME=value yougo-backend-track
+
+
+Pass .env file to docker via docker run command:
+
+docker run --env-file .env -p 3000:3000 yougo-backend-track
+
+```
+
+## Sample API Calls
+
+Here's a couple examples using a tool like Insomnia/Postman to test the API on localhost
+
+![Alt text](docs/images/image.png)
+
+To Rotate an image 
+```
+file: [Attach your image file here]
+angle: enter numerical angle here
+
+```
+
+
+![Alt text](docs/images/image-1.png)
+
+To Resize an image
+```
+file: [Attach your image file here]
+height: 600
+width: 800
+
+```
+![Alt text](docs/images/image-2.png)
+
+
+Define your URL and the specific endpoint you'd like to hit and voila!
+
+
+## Users and Cloud Image Storage
+
+Reveal API provides custom user storage via AWS S3 for users who wish to customize and store their images
+
+When testing locally, you can attach your own S3 bucket and try out
+
+```
+/store, 
+/fetchList, 
+/fetchImage, 
+/ManipulateStore 
+```
+These endpoints utilize S3 for image storage and retrieval
+
+## Cleanup
+
+When testing the API locally, images are stored in the public folder titled after whatever endpoint they were manipulated with
+
+Remember to clear these periodically after local testing
+
+![Alt text](docs/images/image-3.png)
+
 
 ## License
 

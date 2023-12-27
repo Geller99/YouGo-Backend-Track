@@ -2,8 +2,11 @@ const multer = require("multer");
 const multerStorage = multer.memoryStorage();
 
 const multerFilter = (req: Request, file: any, cb: any) => {
-  if (file.mimetype.startWith == "image") cb(null, true);
-  cb(new Error("Wrong file type"), false);
+   if (file.mimetype.startsWith("image")) {
+    cb(null, true);
+  } else {
+    cb(new Error("Not an image! Please upload only images."), false);
+  }
 };
 
 export const upload = multer({

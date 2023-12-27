@@ -12,6 +12,10 @@ export const rotatePhoto = async (req: any, res: any, next: any) => {
   if (!req.file) return next();
 
   const angle: number = Image.filterInt(req.body.angle);
+  if (isNaN(angle)) {
+    return res.status(400).send("Invalid angle provided");
+  }
+  
   const extension: string = req.file.mimetype.split("/")[1];
   const filePath = path.join(
     __dirname,
