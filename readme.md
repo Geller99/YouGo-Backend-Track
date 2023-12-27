@@ -29,15 +29,13 @@
 
 <hr/>
 
-## Looking for the documentation? 📝
+## Looking for Docs ? 📝
 
 The API Swagger Spec YAML file can be found [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/api-docs.yaml) 
 <br/>
 My Design Choices and Decisions are documented [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/design-doc.md)
 <br/>
 Official Project Design Decisions will be documented [here](https://github.com/Geller99/YouGo-Backend-Track/blob/Kohl/docs/moodBoard.md)
-
-
 
 Latest version (v0.0.2)
 
@@ -49,22 +47,11 @@ Latest version (v0.0.2)
 - [X] Multiple Manipulation Tiers
 
 
-## Support Reveal Images API 💖
+### Individuals x Org
 
-Feel free to joing our YouGoDevs community and contribute to the original Project Exercises!
+Backend Dev Track By Zen Horace -> https://github.com/YouGoDevs/YouGo-Backend-Track
 
-### Individuals
-
-Lead Developer - ZenHorace
-
-<br/>
-
-Student        - Geller Micael
-
-### Organizations
-
-YouGo Fullstack Mentoring Group
-
+Implementation -> Geller Micael
 
 
 ## Run (Local) and Deploy Commands
