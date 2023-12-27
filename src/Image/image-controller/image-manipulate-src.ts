@@ -11,7 +11,7 @@ import { Image } from "../image-utils/image-utils";
  */
 
 const aws = require("aws-sdk");
-aws.config.update({ region: "us-east-1" });
+aws.config.update({ region: process.env.AWS_REGION });
 
 const s3 = new aws.S3({
   accessKeyId: AWSInternal.accessKey,

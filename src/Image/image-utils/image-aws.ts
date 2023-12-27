@@ -1,6 +1,6 @@
 export class AWSInternal {
   static bucketName = process.env.AWS_S3_BUCKET;
-  static region = "us-east-1";
+  static region = process.env.AWS_REGION;
   static accessKey = process.env.AWS_ACCESS_KEY_ID;
   static secretKey = process.env.AWS_SECRET_ACCESS_KEY;
 

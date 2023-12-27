@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 const aws = require("aws-sdk");
-aws.config.update({ region: "us-east-1" });
+aws.config.update({ region: process.env.AWS_REGION });
 
 const bucketParams = {
   Bucket: "revealapibucket",
